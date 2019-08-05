@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".SubActivity">
+
+    <TextView
+        android:textSize="20sp"
+        android:id="@+id/tvLop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lớp: " />
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spLop"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvLop" />
+
+    <TextView
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:text="Tên Sinh Viên:"
+        android:id="@+id/tvTensv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLop" />
+
+    <EditText
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/edtTennv"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spLop"
+        android:layout_toRightOf="@+id/tvTensv"
+        android:hint="Nhập tên " />
+
+    <TextView
+        android:textSize="20sp"
+        android:id="@+id/tvNS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTensv"
+        android:layout_marginTop="28dp"
+        android:text="Ngày Sinh: " />
+
+    <EditText
+        android:id="@+id/edtNgaysinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtTennv"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/tvNS"
+        android:hint="Nhập ngày sinh " />
+
+    <Button
+        android:id="@+id/btnThemsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtNgaysinh"
+        android:onClick="ThemNhanVien"
+        android:text="Thêm sinh viên" />
+
+    <TextView
+        android:layout_below="@+id/btnThemsv"
+        android:id="@+id/tvStt"
+        android:background="@android:color/holo_red_dark"
+        android:text="STT       Tên Sinh Viên                                 Ngày Sinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+
+        android:id="@+id/lvList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvStt" />
+
+
+</RelativeLayout>
